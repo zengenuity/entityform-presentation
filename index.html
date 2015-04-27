@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Entityform: The Form Builder Drupal Deserves</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+	
+	
+	<div class="slides">
+		<section data-markdown>
+			<script type="text/template">
+				# Entityform
+				### The Form Builder Drupal Deserves
+
+				April 27, 2015 - Ann Arbor DUG  <!-- .element: style="margin-top: 150px;" -->  
+				[Wayne Eaker](http://wayneeaker.com) / [@wayneeaker](http://twitter.com/wayneeaker)
+			</script>
+		</section>
+		
+		
+		<section data-markdown>
+			<script type="text/template">
+				## What Does Entityform Do? 
+
+				* Customizable forms like "Contact Us"  
+				* Surveys  
+				* Similar to [Webform module](http://drupal.org/project/webform)  
+			</script>
+		</section>
+		
+		<section data-markdown>
+			<script type="text/template">
+				## Why Use Entityform?
+
+				* Entityform: 14,251 reported installs  
+				* Webform: 458,202 reported installs  
+				* The people have spoken! Elvis is king!  <!-- .element: class="fragment" -->
+			</script>
+		</section>
+		
+		<section data-markdown>
+			<script type="text/template">
+				## Webform History
+
+				* First version was for Drupal 4.4 (2005)
+				* First stable release: 4.7 (2007)
+				* Still over 700 reported installs of the D5 version
+				* Now on 7.x-4.x series
+			</script>
+		</section>
+		
+		<section data-markdown>
+			<script type="text/template">
+				## Entityform History
+
+				* First version was for Drupal 7: Dec 2011
+				* First stable release: Nov 2012
+				* Now on 7.x-2.x series
+			</script>
+		</section>
+		
+		<section data-markdown>
+			<script type="text/template">
+				## How is Entityform Different
+
+				* Submissions are Drupal entities  
+				* Uses standard field system  
+				* Out of the box integration with Rules and Views  
+				* Can use standard entity lifecycle hooks to code for submissions (hook_entity_insert(), hook_entity_update(), hook_entity_delete())
+				* Submitted form data is stored differently in the database  
+			</script>
+		</section>
+		
+		<section>
+				<h2>Entityform Demo</h2>
+			
+			<aside class="notes" data-markdown>
+				- Install module    
+				- Add "Contact Us form"  
+				- Demo a submission  
+				- Switch to email field for the email field
+				- Another submission test for validation  
+				- Read the submissions  
+				- Notifications - Set up a simple notification
+			</aside>
+			
+		</section>
+		
+		<section>
+				<h2>Entityform Advanced Demo</h2>
+			
+			<aside class="notes" data-markdown>
+				- Build an room signup form (Event Name, Room - entityref, Date Field, Number of people)  
+				- Equipment reservation - Entityref with multiple  
+				- Demo the equipment reservation form  
+				- Notifications - per-owner of the room/equipment
+			</aside>
+			
+		</section>
+		
+		<section>
+				<h2>Views Integration</h2>
+			
+			<aside class="notes" data-markdown>
+				- Create a calendar view of the entityform submissions
+				- Use a relationship to bring in data from the entity reference.
+			</aside>
+			
+		</section>
+		
+		<section>
+				<h2>Features Integration</h2>
+			
+			<aside class="notes" data-markdown>
+				- Export a feature of everything we've done.
+			</aside>
+			
+		</section>
+		
+		<section data-markdown>
+			## Cool Things That Work Because We're Using Standard Fields
+			
+			* [Field Group module](https://www.drupal.org/project/field_group) - groups, tabs, accordian, multi-page
+			* [Field Validation module](https://www.drupal.org/project/field_validation) - advanced requirements for fields
+			* [Field Permissions module](https://www.drupal.org/project/field_permissions) - limit fields to certain users - e.g. "Approved" field for the room signups
+			* [Field Collection module](https://www.drupal.org/project/field_collection) - multi-valued fields
+			* [Conditional Fields module](https://www.drupal.org/project/conditional_fields) - show/hide fields based on values of other fields
+			* Hundreds of field type modules ([Link](https://www.drupal.org/project/link), [Computed Field](https://www.drupal.org/project/computed_field), [Address Field](https://www.drupal.org/project/addressfield), etc.)
+			
+		</section>
+		
+		<section data-markdown>
+			## Cool Things That Work Because We're Using Drupal Entities
+			
+			* [Views](https://www.drupal.org/project/views)
+			* [Rules](https://www.drupal.org/project/rules)
+			* [Features](https://www.drupal.org/project/features)
+			* [Flag](https://www.drupal.org/project/flag)
+			* [Token](https://www.drupal.org/project/token)
+			* [Organic Groups](https://www.drupal.org/project/og)
+			
+		</section>
+		
+		<section>
+				<h2>Organic Groups Entityform Integration</h2>
+		</section>
+		
+		<section data-markdown>
+			## When Use Entityform?
+			
+			When you want to:
+			
+			* Use standard field types
+			* Integrate with Views, Rules, other Drupal modules
+			* Export easily to Features
+			* Implement complex notifications
+			
+		</section>
+		
+		<section data-markdown>
+			## When Use Webform?
+			
+			When you want to:
+			
+			* Have lots of different forms
+			* Give a sandboxed interface to end users
+			* Create forms with LOTS of fields (150+)
+			* Use built-in analysis tools
+			
+		</section>
+		
+		<section data-markdown>
+			## Webform or Entityform
+			
+			Full breakdown: [https://www.drupal.org/node/1540680](https://www.drupal.org/node/1540680)
+			
+		</section>
+		
+		<section data-markdown>
+			<script type="text/template">
+				# Entityform
+				### The Form Builder Drupal Deserves
+
+				April 27, 2015 - Ann Arbor DUG  <!-- .element: style="margin-top: 150px;" -->  
+				[Wayne Eaker](http://wayneeaker.com) / [@wayneeaker](http://twitter.com/wayneeaker)
+			</script>
+		</section>
+
+	</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+		// Optional reveal.js plugins
+		dependencies: [
+			{
+				src: 'lib/js/classList.js', condition: function () {
+				return !document.body.classList;
+			}
+			},
+			{
+				src: 'plugin/markdown/marked.js', condition: function () {
+				return !!document.querySelector('[data-markdown]');
+			}
+			},
+			{
+				src: 'plugin/markdown/markdown.js', condition: function () {
+				return !!document.querySelector('[data-markdown]');
+			}
+			},
+			{
+				src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+				return !!document.querySelector('pre code');
+			}, callback: function () {
+				hljs.initHighlightingOnLoad();
+			}
+			},
+			{src: 'plugin/zoom-js/zoom.js', async: true},
+			{src: 'plugin/notes/notes.js', async: true}
+		]
+	});
+
+</script>
+
+</body>
+</html>
